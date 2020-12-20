@@ -12,14 +12,14 @@ namespace TicTacToe
                 spaces[i] = " ";
             };
         }
-        public void populateBoard(gameBoard board)
+        public void populateBoard()
         {
             Console.Clear();
             Console.WriteLine("_____________");
 
-            for (int i = 0; i < board.spaces.Length; i++)
+            for (int i = 0; i < this.spaces.Length; i++)
             {
-                Console.Write($"|{board.spaces[i]}");
+                Console.Write($"|{this.spaces[i]}");
                 if ((i+1)%3 == 0) { Console.WriteLine("|"); }
             };
             Console.WriteLine("-------------");

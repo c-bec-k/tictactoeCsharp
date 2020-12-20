@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace TicTacToe
 {
     class Program
@@ -19,7 +18,7 @@ namespace TicTacToe
                 p[i].symbol = symbol;
             }
             gameBoard thisGame = new gameBoard(3);
-            populateBoard(thisGame);
+            thisGame.populateBoard();
         }
     }
 }
