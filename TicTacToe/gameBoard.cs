@@ -7,20 +7,20 @@ namespace TicTacToe
         public gameBoard(int boardSize)
         {
             int size = boardSize;
-            string[] spaces = new string[size * size];
-            for (int i = 0; i < size * size; i++) {
+            spaces = new string[size * size];
+            for (int i = 0; i < spaces.Length; i++) {
                 spaces[i] = " ";
             };
         }
-        public void populateBoard()
+        public void populateBoard(int boardSize)
         {
             Console.Clear();
             Console.WriteLine("_____________");
 
-            for (int i = 0; i < this.spaces.Length; i++)
+            for (int i = 0; i < spaces.Length; i++)
             {
-                Console.Write($"|{this.spaces[i]}");
-                if ((i+1)%3 == 0) { Console.WriteLine("|"); }
+                Console.Write($"| {this.spaces[i]} ");
+                if ((i+1)%boardSize == 0) { Console.WriteLine("|"); }
             };
             Console.WriteLine("-------------");
         }

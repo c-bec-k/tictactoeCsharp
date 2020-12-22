@@ -17,8 +17,14 @@ namespace TicTacToe
                 p[i].name = name;
                 p[i].symbol = symbol;
             }
-            gameBoard thisGame = new gameBoard(3);
-            thisGame.populateBoard();
+            Console.WriteLine("How big of a game board do you want to use?");
+            Console.Write("Ex. [3]x3, [4]x4, [5]x5 etc: ");
+            int boardSize = int.Parse(Console.ReadLine());
+            gameBoard thisGame = new gameBoard(boardSize);
+            Console.Write(thisGame.spaces);
+            thisGame.populateBoard(boardSize);
+            var Play = new PlayGame();
+            Play.ChooseMove(p, thisGame, boardSize, 1);
         }
     }
 }
